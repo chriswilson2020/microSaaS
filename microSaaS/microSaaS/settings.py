@@ -78,8 +78,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'microSaaSdatabse',
 	'USER': 'microSaaSuser',
-	'PASSWORD': 'm1cr0$44$u$3rP44$$w0rd',
-	'HOST':	'localhost',
+	'PASSWORD': 'microSaaSuser',
+	'HOST':	'db',
 	'PORT': '5432',
     }
 }

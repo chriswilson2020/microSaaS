@@ -2,7 +2,7 @@
 
 # Apply database migrations
 echo "Applying database migrations..."
-python manage.py migrate
+python ./microSaaS/manage.py migrate
 
 # Start server
 echo "Starting server..."

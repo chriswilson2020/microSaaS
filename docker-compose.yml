@@ -14,11 +14,11 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_DB: microSaaSdatabse
-      POSTGRES_USER: microSaaSuser
-      POSTGRES_PASSWORD: m1cr0$44$u$3rP44$$w0rd
+      POSTGRES_DB: "microSaaSdatabse"
+      POSTGRES_USER: "microSaaSuser"
+      POSTGRES_PASSWORD: "microSaaSuser"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  volumes:
-    postgres_data:
+volumes:
+  postgres_data:
