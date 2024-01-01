@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: gunicorn microSaaS.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: microSaaSdatabse
+      POSTGRES_USER: microSaaSuser
+      POSTGRES_PASSWORD: m1cr0$44$u$3rP44$$w0rd
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  volumes:
+    postgres_data:
