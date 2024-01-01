@@ -10,6 +10,7 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    entrypoint: ["./wait-for-it.sh", "db:5432", "--", "./start-web.sh"]
 
   db:
     image: postgres:13

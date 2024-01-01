@@ -24,7 +24,9 @@ ENV NAME world
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/src/app/entrypoint.sh
 RUN chmod +x /usr/src/app/entrypoint.sh
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+COPY start-web.sh /usr/src/app/start-web.sh
+RUN chmod +x /usr/src/app/start-web.sh
+ENTRYPOINT ["./start-web.sh"]
 
 # Run app when the container launches
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "microSaaS.wsgi:application"]
