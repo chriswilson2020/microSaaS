@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'microSaaS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'microSaaSdatabse',
+	'USER': 'microSaaSuser',
+	'PASSWORD': 'm1cr0$44$u$3rP44$$w0rd',
+	'HOST':	'localhost',
+	'PORT': '5432',
     }
 }
 
